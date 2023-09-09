@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.inkle.ink-unity-integration": {
+      "version": "https://github.com/inkle/ink-unity-integration.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f7a5ed16b93fe2d220d8833a82e0324276cd2d0e"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
@@ -157,6 +164,15 @@
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.inputsystem": {
+      "version": "1.7.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
