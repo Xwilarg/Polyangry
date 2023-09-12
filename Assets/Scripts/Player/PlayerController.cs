@@ -1,3 +1,4 @@
+using Assets.Scripts.Menu;
 using RainbowJam2023.SO;
 using RainbowJam2023.VN;
 using UnityEngine;
@@ -12,6 +13,21 @@ namespace RainbowJam2023.Player
 
         private float _movX;
         private Rigidbody2D _rb;
+
+        private Interactible _actionTarget;
+        public Interactible ActionTarget
+        {
+            set
+            {
+                _actionTarget = value;
+
+                GameUIManager.Instance.ToggleActionHint(_actionTarget != null);
+            }
+            get
+            {
+                return _actionTarget;
+            }
+        }
 
         private void Awake()
         {
@@ -33,6 +49,14 @@ namespace RainbowJam2023.Player
         public void OnMove(InputAction.CallbackContext value)
         {
             _movX = value.ReadValue<Vector2>().x;
+        }
+
+        public void OnAction(InputAction.CallbackContext value)
+        {
+            if (value.performed && ActionTarget != null)
+            {
+                ActionTarget.InvokeAll();
+            }
         }
     }
 }
