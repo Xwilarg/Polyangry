@@ -9,7 +9,7 @@ namespace RainbowJam2023.Player
 
         public void InvokeAll()
         {
-            _onAction.Invoke();
+            _onAction?.Invoke();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +25,7 @@ namespace RainbowJam2023.Player
             if (collision.CompareTag("Player"))
             {
                 var pc = collision.GetComponent<PlayerController>();
-                if (pc.ActionTarget != null && pc.GetInstanceID() == GetInstanceID())
+                if (pc.ActionTarget != null && pc.ActionTarget.GetInstanceID() == GetInstanceID())
                 {
                     pc.ActionTarget = null;
                 }

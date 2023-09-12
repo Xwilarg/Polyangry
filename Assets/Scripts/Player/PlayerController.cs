@@ -21,7 +21,7 @@ namespace RainbowJam2023.Player
             {
                 _actionTarget = value;
 
-                GameUIManager.Instance.ToggleActionHint(_actionTarget);
+                GameUIManager.Instance.ToggleActionHint(_actionTarget != null);
             }
             get
             {
