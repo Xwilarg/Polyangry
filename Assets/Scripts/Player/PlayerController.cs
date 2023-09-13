@@ -3,6 +3,7 @@ using RainbowJam2023.SO;
 using RainbowJam2023.VN;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace RainbowJam2023.Player
 {
@@ -32,6 +33,8 @@ namespace RainbowJam2023.Player
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+
+            SceneManager.LoadScene("Map", LoadSceneMode.Additive);
         }
 
         private void FixedUpdate()
