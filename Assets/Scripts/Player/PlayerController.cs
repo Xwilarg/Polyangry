@@ -11,10 +11,12 @@ namespace RainbowJam2023.Player
         [SerializeField]
         private PlayerInfo _info;
 
-        private float _movX;
+        private Vector2 _mov;
         private Rigidbody2D _rb;
         private Animator _anim;
         private SpriteRenderer _sr;
+
+        private int _ladderCount;
 
         private Interactible _actionTarget;
         public Interactible ActionTarget
@@ -46,19 +48,41 @@ namespace RainbowJam2023.Player
             }
             else
             {
-                _rb.velocity = new(_movX * _info.Speed, _rb.velocity.y);
+                _rb.velocity = new(_mov.x * _info.Speed, _rb.gravityScale == 0f ? _mov.y * _info.Speed : _rb.velocity.y);
 
-                if (_movX != 0f)
+                if (_mov.x != 0f)
                 {
-                    _sr.flipX = _movX > 0f;
+                    _sr.flipX = _mov.x > 0f;
                 }
-                _anim.SetBool("IsRunning", _movX != 0f);
+                _anim.SetBool("IsRunning", _mov.x != 0f);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Ladder"))
+            {
+                _ladderCount++;
+                _rb.gravityScale = 0f;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Ladder"))
+            {
+                _ladderCount--;
+                if (_ladderCount == 0)
+                {
+                    _rb.gravityScale = 1f;
+                    _rb.velocity = new(_rb.velocity.x, 0f);
+                }
             }
         }
 
         public void OnMove(InputAction.CallbackContext value)
         {
-            _movX = value.ReadValue<Vector2>().x;
+            _mov = value.ReadValue<Vector2>().normalized;
         }
 
         public void OnJump(InputAction.CallbackContext value)
