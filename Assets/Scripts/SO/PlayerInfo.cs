@@ -6,5 +6,6 @@ namespace RainbowJam2023.SO
     public class PlayerInfo : ScriptableObject
     {
         public float Speed;
+        public float JumpForce;
     }
 }

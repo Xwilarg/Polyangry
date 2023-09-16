@@ -54,9 +54,21 @@ namespace RainbowJam2023.Player
             _movX = value.ReadValue<Vector2>().x;
         }
 
+        public void OnJump(InputAction.CallbackContext value)
+        {
+            if (value.performed && !VNManager.Instance.IsPlayingStory)
+            {
+                var hit = Physics2D.Raycast(transform.position, Vector2.down, 1.01f, ~(1 << 6));
+                if (hit.collider != null)
+                {
+                    _rb.AddForce(Vector2.up * _info.JumpForce, ForceMode2D.Impulse);
+                }
+            }
+        }
+
         public void OnAction(InputAction.CallbackContext value)
         {
-            if (value.performed && ActionTarget != null)
+            if (value.performed && ActionTarget != null && !VNManager.Instance.IsPlayingStory)
             {
                 ActionTarget.InvokeAll();
             }
