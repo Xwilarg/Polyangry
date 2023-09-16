@@ -4,7 +4,7 @@ using UnityEngine;
 namespace RainbowJam2023.Prop
 {
     [RequireComponent(typeof(Interactible))]
-    public class Switch : AColorListener
+    public abstract class Switch : AColorListener
     {
         [SerializeField]
         private GameObject _onPos, _offPos;
