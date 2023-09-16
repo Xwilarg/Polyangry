@@ -13,6 +13,8 @@ namespace RainbowJam2023.Player
 
         private float _movX;
         private Rigidbody2D _rb;
+        private Animator _anim;
+        private SpriteRenderer _sr;
 
         private Interactible _actionTarget;
         public Interactible ActionTarget
@@ -32,6 +34,8 @@ namespace RainbowJam2023.Player
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _sr = GetComponent<SpriteRenderer>();
+            _anim = GetComponent<Animator>();
         }
 
         private void FixedUpdate()
@@ -43,6 +47,12 @@ namespace RainbowJam2023.Player
             else
             {
                 _rb.velocity = new(_movX * _info.Speed, _rb.velocity.y);
+
+                if (_movX != 0f)
+                {
+                    _sr.flipX = _movX > 0f;
+                }
+                _anim.SetBool("IsRunning", _movX != 0f);
             }
         }
 
