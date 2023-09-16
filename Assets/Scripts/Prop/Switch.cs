@@ -12,7 +12,7 @@ namespace RainbowJam2023.Prop
         [SerializeField]
         private SpriteRenderer _colorDisplay;
 
-        private Interactible _interactible;
+        protected Interactible _interactible;
 
         public override bool IsOffBehaviorUsingTransparency => false;
 
@@ -27,20 +27,16 @@ namespace RainbowJam2023.Prop
             _interactible.CanBeUsed = !amITarget;
         }
 
-        private void Awake()
+        protected void AwakeSwitch()
         {
             _onPos.SetActive(false);
 
             InitColorDisplay(_colorDisplay);
 
             _interactible = GetComponent<Interactible>();
-            _interactible.OnAction.AddListener(new(() =>
-            {
-                GameManager.Instance.SetCurrentColor(_color);
-            }));
         }
 
-        private void Start()
+        protected void StartSwitch()
         {
             GameManager.Instance.RegisterListener(this);
         }
