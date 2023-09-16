@@ -5,7 +5,12 @@ namespace RainbowJam2023.Player
 {
     public class Interactible : MonoBehaviour
     {
+        [SerializeField]
         private UnityEvent _onAction;
+
+        public UnityEvent OnAction => _onAction;
+
+        public bool CanBeUsed { set; get; } = true;
 
         public void InvokeAll()
         {
@@ -14,7 +19,7 @@ namespace RainbowJam2023.Player
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.CompareTag("Player") && CanBeUsed)
             {
                 collision.GetComponent<PlayerController>().ActionTarget = this;
             }

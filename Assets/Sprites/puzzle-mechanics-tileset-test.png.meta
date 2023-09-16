@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 56
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd0a5e3e439bdb4ead46966b03ae801
+      internalID: 283381237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 16
+        width: 50
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d678e4c328568fb4ca272ccdf89ae27e
+      internalID: -839230008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_2
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 0
+        width: 25
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a2d63e19ca1f14786d7ba9e1e506f8
+      internalID: 1734054491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_3
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 166
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a79ce04e36629e44912577744bdafe5
+      internalID: -1112324378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_4
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 166
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d02af5b3f4aa6b45a32cb0ea34450d1
+      internalID: -142584283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 128
+        width: 124
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fa56c3c6cc2d1448aa9369db34feac
+      internalID: -1926377313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_6
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0
+        width: 80
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8235c04b0ff0dea4bbbc4fd2b3d9f692
+      internalID: -575682948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_7
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 139
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ba0aff396d6904cbc1d1877047832a
+      internalID: -937803008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_8
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 74
+        width: 36
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263692693ad90064eb94dc1d8737017f
+      internalID: -602355065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_9
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 71
+        width: 124
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07519d8815880034c82ff5a2021063e2
+      internalID: -1790320819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_10
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 25
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2567f85066ec043a38f0adda47bfa5
+      internalID: 1551655938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 64
+        width: 41
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c31615b960652d4f8a206c5a409bf55
+      internalID: 888028619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_12
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 10
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443a6e4ad198dfe40a2390e85d59006a
+      internalID: 1644032932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_13
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 11
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be063c123912dc489e200218355e30f
+      internalID: 820683510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_14
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 18
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1029a6d3ac0e62746a122d5777938ba3
+      internalID: -1757058962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: puzzle-mechanics-tileset-test_15
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 18
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4b6acbaac92964b9b57c33cc2f98d8
+      internalID: 1679022725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +468,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      puzzle-mechanics-tileset-test_0: 283381237
+      puzzle-mechanics-tileset-test_1: -839230008
+      puzzle-mechanics-tileset-test_10: 1551655938
+      puzzle-mechanics-tileset-test_11: 888028619
+      puzzle-mechanics-tileset-test_12: 1644032932
+      puzzle-mechanics-tileset-test_13: 820683510
+      puzzle-mechanics-tileset-test_14: -1757058962
+      puzzle-mechanics-tileset-test_15: 623556570
+      puzzle-mechanics-tileset-test_2: 1734054491
+      puzzle-mechanics-tileset-test_3: -1112324378
+      puzzle-mechanics-tileset-test_4: -142584283
+      puzzle-mechanics-tileset-test_5: -1926377313
+      puzzle-mechanics-tileset-test_6: -575682948
+      puzzle-mechanics-tileset-test_7: -937803008
+      puzzle-mechanics-tileset-test_8: -602355065
+      puzzle-mechanics-tileset-test_9: -1790320819
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
