@@ -4,7 +4,7 @@ using UnityEngine;
 namespace RainbowJam2023.Prop
 {
     [RequireComponent(typeof(Interactible))]
-    public class Switch : MonoBehaviour
+    public class Switch : AColorListener
     {
         [SerializeField]
         private GameObject _onPos, _offPos;
@@ -12,20 +12,18 @@ namespace RainbowJam2023.Prop
         [SerializeField]
         private SpriteRenderer _colorDisplay;
 
-        [SerializeField]
-        private GameManager.Color _color;
-
-        private Color _colorOn, _colorOff;
-
         private Interactible _interactible;
 
-        public void UpdateFromColor(GameManager.Color baseColor)
+        public override bool IsOffBehaviorUsingTransparency => false;
+
+        public override void UpdateFromColor(GameManager.Color baseColor)
         {
+            base.UpdateFromColor(baseColor);
+
             var amITarget = baseColor == _color;
 
             _onPos.SetActive(amITarget);
             _offPos.SetActive(!amITarget);
-            _colorDisplay.color = amITarget ? _colorOn : _colorOff;
             _interactible.CanBeUsed = !amITarget;
         }
 
@@ -33,14 +31,7 @@ namespace RainbowJam2023.Prop
         {
             _onPos.SetActive(false);
 
-            _colorOn = GameManager.ColorToRGB(_color);
-            _colorOff = new(
-                r: Mathf.Clamp01(_colorOn.r - .2f),
-                g: Mathf.Clamp01(_colorOn.g - .2f),
-                b: Mathf.Clamp01(_colorOn.b - .2f)
-            );
-
-            _colorDisplay.color = _colorOff;
+            InitColorDisplay(_colorDisplay);
 
             _interactible = GetComponent<Interactible>();
             _interactible.OnAction.AddListener(new(() =>
@@ -51,7 +42,7 @@ namespace RainbowJam2023.Prop
 
         private void Start()
         {
-            GameManager.Instance.RegisterSwitch(this);
+            GameManager.Instance.RegisterListener(this);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace RainbowJam2023
 
         public Color CurrentColor { private set; get; }
 
-        private readonly List<Switch> _switchs = new();
+        private readonly List<AColorListener> _colorListeners = new();
 
         private void Awake()
         {
@@ -20,17 +20,17 @@ namespace RainbowJam2023
             SceneManager.LoadScene("Map", LoadSceneMode.Additive);
         }
 
-        public void RegisterSwitch(Switch s)
+        public void RegisterListener(AColorListener l)
         {
-            _switchs.Add(s);
+            _colorListeners.Add(l);
         }
 
         public void SetCurrentColor(Color c)
         {
             CurrentColor = c;
-            foreach (var s in _switchs)
+            foreach (var cl in _colorListeners)
             {
-                s.UpdateFromColor(c);
+                cl.UpdateFromColor(c);
             }
         }
 
