@@ -1,6 +1,8 @@
 using Assets.Scripts.Menu;
+using RainbowJam2023.Prop;
 using RainbowJam2023.SO;
 using RainbowJam2023.VN;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,14 +20,41 @@ namespace RainbowJam2023.Player
 
         private int _ladderCount;
 
+        private Vector2 _startPos;
+
+        private bool _canUseActionTarget;
         private Interactible _actionTarget;
         public Interactible ActionTarget
         {
             set
             {
                 _actionTarget = value;
+                _canUseActionTarget = true;
 
-                GameUIManager.Instance.ToggleActionHint(_actionTarget != null);
+                if (_actionTarget == null)
+                {
+                    GameUIManager.Instance.RemoveAllHints();
+                }
+                else
+                {
+                    var colorListener = _actionTarget.GetComponent<AColorListener>();
+                    if (colorListener != null)
+                    {
+                        if (GameManager.Instance.HasColor(colorListener.Color))
+                        {
+                            GameUIManager.Instance.DisplayActionHint();
+                        }
+                        else
+                        {
+                            GameUIManager.Instance.DisplayColorNotAvailableHint();
+                            _canUseActionTarget = false;
+                        }
+                    }
+                    else
+                    {
+                        GameUIManager.Instance.DisplayActionHint();
+                    }
+                }
             }
             get
             {
@@ -38,6 +67,8 @@ namespace RainbowJam2023.Player
             _rb = GetComponent<Rigidbody2D>();
             _sr = GetComponent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
+
+            _startPos = transform.position;
         }
 
         private void FixedUpdate()
@@ -55,6 +86,12 @@ namespace RainbowJam2023.Player
                     _sr.flipX = _mov.x > 0f;
                 }
                 _anim.SetBool("IsRunning", _mov.x != 0f);
+            }
+
+            if (transform.position.y < -5f)
+            {
+                transform.position = _startPos;
+                _rb.velocity = Vector2.zero;
             }
         }
 
@@ -99,7 +136,7 @@ namespace RainbowJam2023.Player
 
         public void OnAction(InputAction.CallbackContext value)
         {
-            if (value.performed && ActionTarget != null && !VNManager.Instance.IsPlayingStory)
+            if (value.performed && ActionTarget != null && !VNManager.Instance.IsPlayingStory && _canUseActionTarget)
             {
                 ActionTarget.InvokeAll();
                 ActionTarget = null;

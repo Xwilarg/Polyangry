@@ -1,4 +1,5 @@
 ﻿using Ink.Runtime;
+using System;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -33,6 +34,8 @@ namespace RainbowJam2023.VN
         private float _skipTimer;
         private float _skipTimerRef = .1f;
 
+        private Action _onDone;
+
         private void Awake()
         {
             Instance = this;
@@ -42,7 +45,7 @@ namespace RainbowJam2023.VN
 
         private void Start()
         {
-            ShowStory(_intro);
+            ShowStory(_intro, null);
         }
 
         private void Update()
@@ -58,9 +61,10 @@ namespace RainbowJam2023.VN
             }
         }
 
-        private void ShowStory(TextAsset asset)
+        public void ShowStory(TextAsset asset, Action onDone)
         {
             Debug.Log($"[STORY] Playing {asset.name}");
+            _onDone = onDone;
             _story = new(asset.text);
             _isSkipEnabled = false;
             DisplayStory(_story.Continue());
@@ -101,6 +105,7 @@ namespace RainbowJam2023.VN
             else if (!_story.canContinue && !_story.currentChoices.Any())
             {
                 _container.SetActive(false);
+                _onDone?.Invoke();
             }
         }
 

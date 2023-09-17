@@ -11,6 +11,8 @@ namespace RainbowJam2023.Prop
         [SerializeField]
         protected GameManager.Color _color;
 
+        public GameManager.Color Color => _color;
+
         public abstract bool IsOffBehaviorUsingTransparency { get; }
 
         public virtual void UpdateFromColor(GameManager.Color baseColor)
