@@ -13,6 +13,7 @@ namespace RainbowJam2023.Prop
 
         public void UnlockNPC()
         {
+            BGMManager.Instance.PlayNext();
             VNManager.Instance.ShowStory(_story, () =>
             {
                 GameManager.Instance.UnlockColor(_color);
