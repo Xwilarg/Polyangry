@@ -1333,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161500696076974942, guid: 78c28234f1e3ab44f8b9d4170ce5b487, type: 3}
       propertyPath: _color
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1784,8 +1784,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2166,7 +2166,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2071757515
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &2074543148
@@ -2541,12 +2541,16 @@ PrefabInstance:
       value: ColorBlock
       objectReference: {fileID: 0}
     - target: {fileID: 5078318981555467962, guid: 1b17c5e9e63bc1145804aaba3cbc5c8b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078318981555467962, guid: 1b17c5e9e63bc1145804aaba3cbc5c8b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -251.634
+      value: -249.884
       objectReference: {fileID: 0}
     - target: {fileID: 5078318981555467962, guid: 1b17c5e9e63bc1145804aaba3cbc5c8b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -245.403
+      value: -244.153
       objectReference: {fileID: 0}
     - target: {fileID: 5078318981555467962, guid: 1b17c5e9e63bc1145804aaba3cbc5c8b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2667,11 +2671,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1051636344035231792, guid: 3288dcfb0e0b278418b849c494a36cfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -241.54509
+      value: -251.29509
       objectReference: {fileID: 0}
     - target: {fileID: 1051636344035231792, guid: 3288dcfb0e0b278418b849c494a36cfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -249.51001
+      value: -245.01001
       objectReference: {fileID: 0}
     - target: {fileID: 1051636344035231792, guid: 3288dcfb0e0b278418b849c494a36cfd, type: 3}
       propertyPath: m_LocalPosition.z

@@ -13,7 +13,7 @@ namespace RainbowJam2023
         public Color CurrentColor { private set; get; }
 
         private readonly List<AColorListener> _colorListeners = new();
-        private readonly List<Color> _availableColors = new();
+        private readonly List<Color> _availableColors = new() { Color.RED };
 
         public bool HasColor(Color c)
             => _availableColors.Contains(c);
