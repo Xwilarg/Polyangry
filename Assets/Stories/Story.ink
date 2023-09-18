@@ -1,6 +1,6 @@
 ﻿-> intro
 == intro ==
-Hi I'm the developer of the game
-I'm writing this sample intro to test Ink integration
-Please whoever read this, edit this file properly
+This is a sample dialogue for the intro
+Hi I'm the MC of the game #speaker mc
+Your goal is to solve the puzzles, good luck #speaker none
 -> DONE

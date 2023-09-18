@@ -1,10 +1,13 @@
 ﻿using Ink.Runtime;
+using RainbowJam2023.SO;
 using System;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace RainbowJam2023.VN
 {
@@ -16,6 +19,10 @@ namespace RainbowJam2023.VN
         [SerializeField]
         private TextDisplay _display;
 
+        [SerializeField]
+        private VNCharacterInfo[] _characters;
+        private VNCharacterInfo _currentCharacter;
+
         private Story _story;
 
         [SerializeField]
@@ -26,6 +33,9 @@ namespace RainbowJam2023.VN
 
         [SerializeField]
         private GameObject _namePanel;
+
+        [SerializeField]
+        private Image _bustImage;
 
         [SerializeField]
         private TMP_Text _nameText;
@@ -64,6 +74,7 @@ namespace RainbowJam2023.VN
         public void ShowStory(TextAsset asset, Action onDone)
         {
             Debug.Log($"[STORY] Playing {asset.name}");
+            _currentCharacter = null;
             _onDone = onDone;
             _story = new(asset.text);
             _isSkipEnabled = false;
@@ -77,13 +88,34 @@ namespace RainbowJam2023.VN
             foreach (var tag in _story.currentTags)
             {
                 var s = tag.Split(' ');
-                var content = string.Join(' ', s.Skip(1));
+                var content = string.Join(' ', s.Skip(1)).ToUpperInvariant();
                 switch (s[0])
                 {
-                    // TODO
+                    case "speaker":
+                        if (content == "none") _currentCharacter = null;
+                        else _currentCharacter = _characters.FirstOrDefault(x => x.Name.ToUpperInvariant() == content);
+
+                        Debug.Log($"[STORY] Speaker set to {_currentCharacter?.Name}");
+                        break;
+
+                    default:
+                        Debug.LogError($"Unknown story key: {s[0]}");
+                        break;
                 }
             }
             _display.ToDisplay = text;
+            if (_currentCharacter == null)
+            {
+                _namePanel.SetActive(false);
+                _bustImage.gameObject.SetActive(false);
+            }
+            else
+            {
+                _namePanel.SetActive(true);
+                _bustImage.gameObject.SetActive(true);
+                _nameText.text = _currentCharacter.DisplayName;
+                _bustImage.sprite = _currentCharacter.Sprite;
+            }
         }
 
         public void DisplayNextDialogue()

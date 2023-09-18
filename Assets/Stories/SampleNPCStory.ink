@@ -1,5 +1,5 @@
 ﻿-> start
 == start ==
-Hi I'm Sample NPC but you can just call me Sampy
-Thanks for saving me
+Hi I'm Aoi #speaker aoi
+You can now use blue color #speaker none
 -> DONE
