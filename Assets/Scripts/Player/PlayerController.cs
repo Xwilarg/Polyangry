@@ -22,6 +22,8 @@ namespace RainbowJam2023.Player
 
         private Vector2 _startPos;
 
+        private bool _canClimb;
+
         private bool _canUseActionTarget;
         private Interactible _actionTarget;
         public Interactible ActionTarget
@@ -79,8 +81,24 @@ namespace RainbowJam2023.Player
             }
             else
             {
-                // TODO: Remove _mov normalized when running
-                _rb.velocity = new(_mov.x * _info.Speed, _rb.gravityScale == 0f ? _mov.y * _info.Speed : _rb.velocity.y);
+                // Calculate speed
+                Vector2 dir;
+                if (_rb.gravityScale == 0f) // We are currently climbing
+                {
+                    dir = _mov.normalized * _info.Speed;
+                    Debug.Log("climbing");
+                }
+                else if (_canClimb && _mov.y != 0f) // We can climb and press up/down
+                {
+                    _rb.gravityScale = 0f;
+                    dir = _mov.normalized * _info.Speed;
+                    Debug.Log("climbing start");
+                }
+                else // On the floor
+                {
+                    dir = new(_mov.x * _info.Speed, _rb.velocity.y);
+                }
+                _rb.velocity = dir;
 
                 _anim.SetBool("IsClimbing", _rb.gravityScale == 0f);
 
@@ -103,7 +121,7 @@ namespace RainbowJam2023.Player
             if (collision.CompareTag("Ladder"))
             {
                 _ladderCount++;
-                _rb.gravityScale = 0f;
+                _canClimb = true;
             }
         }
 
@@ -114,15 +132,19 @@ namespace RainbowJam2023.Player
                 _ladderCount--;
                 if (_ladderCount == 0)
                 {
-                    _rb.gravityScale = 1f;
-                    _rb.velocity = new(_rb.velocity.x, 0f);
+                    _canClimb = false;
+                    if (_rb.gravityScale == 0f)
+                    {
+                        _rb.gravityScale = 1f;
+                        _rb.velocity = new(_rb.velocity.x, 0f);
+                    }
                 }
             }
         }
 
         public void OnMove(InputAction.CallbackContext value)
         {
-            _mov = value.ReadValue<Vector2>().normalized;
+            _mov = value.ReadValue<Vector2>();
         }
 
         public void OnJump(InputAction.CallbackContext value)
