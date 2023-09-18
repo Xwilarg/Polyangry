@@ -79,13 +79,16 @@ namespace RainbowJam2023.Player
             }
             else
             {
+                // TODO: Remove _mov normalized when running
                 _rb.velocity = new(_mov.x * _info.Speed, _rb.gravityScale == 0f ? _mov.y * _info.Speed : _rb.velocity.y);
+
+                _anim.SetBool("IsClimbing", _rb.gravityScale == 0f);
 
                 if (_mov.x != 0f)
                 {
                     _sr.flipX = _mov.x > 0f;
                 }
-                _anim.SetBool("IsRunning", _mov.x != 0f);
+                _anim.SetBool("IsRunning", _mov.magnitude != 0f);
             }
 
             if (transform.position.y < -5f)
