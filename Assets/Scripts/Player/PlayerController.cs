@@ -85,14 +85,12 @@ namespace RainbowJam2023.Player
                 Vector2 dir;
                 if (_rb.gravityScale == 0f) // We are currently climbing
                 {
-                    dir = _mov.normalized * _info.Speed;
-                    Debug.Log("climbing");
+                    dir = _mov.normalized * _info.Speed / 2f;
                 }
                 else if (_canClimb && _mov.y != 0f) // We can climb and press up/down
                 {
                     _rb.gravityScale = 0f;
-                    dir = _mov.normalized * _info.Speed;
-                    Debug.Log("climbing start");
+                    dir = _mov.normalized * _info.Speed / 2f;
                 }
                 else // On the floor
                 {

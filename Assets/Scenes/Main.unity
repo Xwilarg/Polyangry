@@ -248,6 +248,8 @@ MonoBehaviour:
   _characters:
   - {fileID: 11400000, guid: 532203e4c9f2e81498c8ed206ab3e270, type: 2}
   - {fileID: 11400000, guid: 5b617d9aa4041074c949f8583220ce3e, type: 2}
+  - {fileID: 11400000, guid: 944bd2021ef7e864881e45bbc5b5af6f, type: 2}
+  - {fileID: 11400000, guid: 1c24fb56343202b4fb3e9d30430ef305, type: 2}
   _container: {fileID: 1757074213}
   _intro: {fileID: 4900000, guid: e19157f60a617cb4e931bb416f16edfa, type: 3}
   _namePanel: {fileID: 1540201817}
