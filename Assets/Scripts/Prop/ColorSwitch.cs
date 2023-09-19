@@ -8,6 +8,7 @@
 
             _interactible.OnAction.AddListener(new(() =>
             {
+                _source.Play();
                 GameManager.Instance.SetCurrentColor(_color);
             }));
         }

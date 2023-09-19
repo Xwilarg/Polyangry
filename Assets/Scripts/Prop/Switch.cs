@@ -13,6 +13,7 @@ namespace RainbowJam2023.Prop
         private SpriteRenderer _colorDisplay;
 
         protected Interactible _interactible;
+        protected AudioSource _source;
 
         public override bool IsOffBehaviorUsingTransparency => false;
 
@@ -34,6 +35,7 @@ namespace RainbowJam2023.Prop
             InitColorDisplay(_colorDisplay);
 
             _interactible = GetComponent<Interactible>();
+            _source = GetComponent<AudioSource>();
         }
 
         protected void StartSwitch()
