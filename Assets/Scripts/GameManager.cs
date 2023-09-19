@@ -10,7 +10,7 @@ namespace RainbowJam2023
     {
         public static GameManager Instance { get; private set; }
 
-        public Color CurrentColor { private set; get; }
+        public Color CurrentColor { private set; get; } = Color.BLACK;
 
         private readonly List<AColorListener> _colorListeners = new();
         private readonly List<Color> _availableColors = new() { Color.RED };
@@ -32,6 +32,7 @@ namespace RainbowJam2023
         public void RegisterListener(AColorListener l)
         {
             _colorListeners.Add(l);
+            l.UpdateFromColor(CurrentColor);
         }
 
         public void SetCurrentColor(Color c)
