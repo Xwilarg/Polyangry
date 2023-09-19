@@ -33,7 +33,7 @@ namespace RainbowJam2023.Prop
                     r: _colorOn.r,
                     g: _colorOn.g,
                     b: _colorOn.b,
-                    a: .5f
+                    a: .2f
                 );
             }
             else

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: black
   DisplayName: Noire
-  Sprite: {fileID: 21300000, guid: 6c6fbd26e92dc0344ac3523d7716106a, type: 3}
+  Sprite: {fileID: 21300000, guid: 4603580b42f88034e9cec610e0050e49, type: 3}
