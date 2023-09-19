@@ -10,6 +10,9 @@ namespace RainbowJam2023.Prop
         [SerializeField]
         private float _speed;
 
+        [SerializeField]
+        private SpriteRenderer _colorDisplay;
+
         private int _nodeIndex;
 
         private const float _minDist = .1f;
@@ -22,6 +25,7 @@ namespace RainbowJam2023.Prop
 
         public override void UpdateFromColor(GameManager.Color baseColor)
         {
+            base.UpdateFromColor(baseColor);
             _isActive = baseColor == _color;
 
             if (!_isActive)
@@ -33,6 +37,7 @@ namespace RainbowJam2023.Prop
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            InitColorDisplay(_colorDisplay);
         }
 
         private void Start()

@@ -39,9 +39,9 @@ namespace RainbowJam2023.Prop
             else
             {
                 _colorOff = new(
-                    r: Mathf.Clamp01(_colorOn.r - .2f),
-                    g: Mathf.Clamp01(_colorOn.g - .2f),
-                    b: Mathf.Clamp01(_colorOn.b - .2f)
+                    r: Mathf.Clamp01(_colorOn.r - .35f),
+                    g: Mathf.Clamp01(_colorOn.g - .35f),
+                    b: Mathf.Clamp01(_colorOn.b - .35f)
                 );
             }
 
