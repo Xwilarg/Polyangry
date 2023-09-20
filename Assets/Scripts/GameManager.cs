@@ -15,6 +15,13 @@ namespace RainbowJam2023
         private readonly List<AColorListener> _colorListeners = new();
         private readonly List<Color> _availableColors = new() { Color.RED };
 
+        public bool IsInEasterEgg { set; get; }
+
+        private AudioSource _source;
+
+        [SerializeField]
+        private AudioClip[] _easterSounds;
+
         public bool HasColor(Color c)
             => _availableColors.Contains(c);
 
@@ -25,8 +32,17 @@ namespace RainbowJam2023
 
         private void Awake()
         {
+            _source = GetComponent<AudioSource>();
             Instance = this;
             SceneManager.LoadScene("Map", LoadSceneMode.Additive);
+        }
+
+        public void PlaySound(int index)
+        {
+            if (IsInEasterEgg)
+            {
+                _source.PlayOneShot(_easterSounds[index]);
+            }
         }
 
         public void RegisterListener(AColorListener l)

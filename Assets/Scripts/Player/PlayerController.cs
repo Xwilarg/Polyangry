@@ -2,7 +2,7 @@ using Assets.Scripts.Menu;
 using RainbowJam2023.Prop;
 using RainbowJam2023.SO;
 using RainbowJam2023.VN;
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -121,6 +121,10 @@ namespace RainbowJam2023.Player
                 _ladderCount++;
                 _canClimb = true;
             }
+            else if (collision.CompareTag("EasterEgg"))
+            {
+                GameManager.Instance.IsInEasterEgg = true;
+            }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
@@ -137,6 +141,10 @@ namespace RainbowJam2023.Player
                         _rb.velocity = new(_rb.velocity.x, 0f);
                     }
                 }
+            }
+            else if (collision.CompareTag("EasterEgg"))
+            {
+                GameManager.Instance.IsInEasterEgg = false;
             }
         }
 
@@ -165,5 +173,25 @@ namespace RainbowJam2023.Player
                 ActionTarget = null;
             }
         }
+
+        private void OnEasterInternal(InputAction.CallbackContext value, int index)
+        {
+            if (value.performed)
+            {
+                GameManager.Instance.PlaySound(index);
+            }
+        }
+        public void OnEaster1(InputAction.CallbackContext value) => OnEasterInternal(value, 0);
+        public void OnEaster2(InputAction.CallbackContext value) => OnEasterInternal(value, 1);
+        public void OnEaster3(InputAction.CallbackContext value) => OnEasterInternal(value, 2);
+        public void OnEaster4(InputAction.CallbackContext value) => OnEasterInternal(value, 3);
+        public void OnEaster5(InputAction.CallbackContext value) => OnEasterInternal(value, 4);
+        public void OnEaster6(InputAction.CallbackContext value) => OnEasterInternal(value, 5);
+        public void OnEaster7(InputAction.CallbackContext value) => OnEasterInternal(value, 6);
+        public void OnEaster8(InputAction.CallbackContext value) => OnEasterInternal(value, 7);
+        public void OnEaster9(InputAction.CallbackContext value) => OnEasterInternal(value, 8);
+        public void OnEaster10(InputAction.CallbackContext value) => OnEasterInternal(value, 9);
+        public void OnEaster11(InputAction.CallbackContext value) => OnEasterInternal(value, 10);
+        public void OnEaster12(InputAction.CallbackContext value) => OnEasterInternal(value, 11);
     }
 }
