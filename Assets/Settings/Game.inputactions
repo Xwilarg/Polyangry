@@ -361,7 +361,7 @@
                 {
                     "name": "",
                     "id": "ebec2e79-ef40-4da5-919b-c4bd5d1e26b5",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -372,7 +372,7 @@
                 {
                     "name": "",
                     "id": "37778254-919e-49de-b1d1-385c050a0f45",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -383,7 +383,7 @@
                 {
                     "name": "",
                     "id": "9a976da1-8ea9-4148-9162-b0b9214fb307",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/h",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -394,7 +394,7 @@
                 {
                     "name": "",
                     "id": "dd8d85f7-e250-4353-a896-b4c5c40f5c81",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/j",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -405,7 +405,7 @@
                 {
                     "name": "",
                     "id": "be8d32b7-368a-45ce-9570-870dbe78d1c9",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -416,7 +416,7 @@
                 {
                     "name": "",
                     "id": "0bd2e32e-117c-43ef-a9a4-0216ff6e4719",
-                    "path": "<Keyboard>/h",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -427,7 +427,7 @@
                 {
                     "name": "",
                     "id": "27a35323-3d7b-416e-8d12-9ecbde1555eb",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -438,7 +438,7 @@
                 {
                     "name": "",
                     "id": "eebf192d-886c-4c68-9ea6-abc2f8cac687",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -449,7 +449,7 @@
                 {
                     "name": "",
                     "id": "5e7e1024-e79b-4b31-9aed-dc9ea8ce4d8d",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -460,7 +460,7 @@
                 {
                     "name": "",
                     "id": "a1ac2c08-c3cf-4ae9-993f-c38796da3a2b",
-                    "path": "<Keyboard>/m",
+                    "path": "<Keyboard>/n",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -471,7 +471,7 @@
                 {
                     "name": "",
                     "id": "94eec0b3-8087-4f30-a629-8d56cb942a01",
-                    "path": "<Keyboard>/semicolon",
+                    "path": "<Keyboard>/m",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -482,7 +482,7 @@
                 {
                     "name": "",
                     "id": "491fad27-d734-42e2-b0cf-b3bbd77ca11d",
-                    "path": "<Keyboard>/quote",
+                    "path": "<Keyboard>/comma",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
