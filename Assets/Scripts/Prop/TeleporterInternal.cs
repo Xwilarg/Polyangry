@@ -9,7 +9,7 @@ namespace RainbowJam2023.Prop
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player") && Teleporter.CanBeUsed)
+            if (collision.CompareTag("Player") && Teleporter.IsRightColor && Teleporter.CanBeUsed)
             {
                 StartCoroutine(Teleporter.Reload());
                 collision.transform.position = Next.position;

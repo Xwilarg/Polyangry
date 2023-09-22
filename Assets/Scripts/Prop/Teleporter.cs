@@ -10,7 +10,10 @@ public class Teleporter : AColorListener
     private TeleporterInternal[] _teleporters;
     private ParticleSystem[] _pSystems;
 
+    private Color _colorRGB;
+
     public bool CanBeUsed { set; get; } = true;
+    public bool IsRightColor { set; get; } = false;
     public IEnumerator Reload()
     {
         CanBeUsed = false;
@@ -32,8 +35,13 @@ public class Teleporter : AColorListener
         }
         foreach (var ps in _pSystems)
         {
-            ps.startColor = GameManager.ColorToRGB(_color);
-            ps.gameObject.SetActive(false);
+            _colorRGB = GameManager.ColorToRGB(_color);
+            ps.startColor = new(
+                r: _colorRGB.r,
+                g: _colorRGB.g,
+                b: _colorRGB.b,
+                a: .2f
+            );
         }
     }
 
@@ -48,15 +56,22 @@ public class Teleporter : AColorListener
         {
             foreach (var ps in _pSystems)
             {
-                ps.gameObject.SetActive(true);
+                ps.startColor = _colorRGB;
             }
+            IsRightColor = true;
         }
         else
         {
             foreach (var ps in _pSystems)
             {
-                ps.gameObject.SetActive(false);
+                ps.startColor = new(
+                    r: _colorRGB.r,
+                    g: _colorRGB.g,
+                    b: _colorRGB.b,
+                    a: .2f
+                );
             }
+            IsRightColor = false;
         }
     }
 }
