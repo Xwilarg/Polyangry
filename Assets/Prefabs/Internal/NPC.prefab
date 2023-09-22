@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8080096233374535498}
   - component: {fileID: 5284645145414395697}
   - component: {fileID: 5948976375274450938}
+  - component: {fileID: 7090032075159728594}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -173,3 +174,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _story: {fileID: 4900000, guid: f782513f16b95674ab3ce33d535702c4, type: 3}
   _color: 3
+--- !u!95 &7090032075159728594
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8761132926602109654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
