@@ -69,7 +69,11 @@ namespace RainbowJam2023.Player
             _rb = GetComponent<Rigidbody2D>();
             _sr = GetComponent<SpriteRenderer>();
             _anim = GetComponent<Animator>();
+        }
 
+        private void Start()
+        {
+            transform.position = GameObject.FindGameObjectWithTag("StartingPos").transform.position;
             _startPos = transform.position;
         }
 

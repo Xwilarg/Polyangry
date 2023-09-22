@@ -1,4 +1,5 @@
-﻿using RainbowJam2023.Prop;
+﻿using RainbowJam2023.Menu;
+using RainbowJam2023.Prop;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,7 @@ namespace RainbowJam2023
         {
             _source = GetComponent<AudioSource>();
             Instance = this;
-            SceneManager.LoadScene("Map", LoadSceneMode.Additive);
+            SceneManager.LoadScene(MainMenu.LevelData ?? "SampleMap", LoadSceneMode.Additive);
         }
 
         public void PlaySound(int index)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ladder
   - EasterEgg
+  - StartingPos
   layers:
   - Default
   - TransparentFX
