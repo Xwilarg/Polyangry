@@ -10,6 +10,8 @@ public class Teleporter : AColorListener
     private TeleporterInternal[] _teleporters;
     private ParticleSystem[] _pSystems;
 
+    private AudioSource _source;
+
     private Color _colorRGB;
 
     public bool CanBeUsed { set; get; } = true;
@@ -21,10 +23,16 @@ public class Teleporter : AColorListener
         CanBeUsed = true;
     }
 
+    public void PlaySound()
+    {
+        _source.Play();
+    }
+
     public override bool IsOffBehaviorUsingTransparency => false;
 
     private void Awake()
     {
+        _source = GetComponent<AudioSource>();
         _pSystems = _teleporters.Select(x => x.GetComponent<ParticleSystem>()).ToArray();
         int i = 0;
         foreach (var t in _teleporters)

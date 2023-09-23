@@ -11,6 +11,7 @@ namespace RainbowJam2023.Prop
         {
             if (collision.CompareTag("Player") && Teleporter.IsRightColor && Teleporter.CanBeUsed)
             {
+                Teleporter.PlaySound();
                 StartCoroutine(Teleporter.Reload());
                 collision.transform.position = Next.position;
             }
