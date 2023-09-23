@@ -90,15 +90,18 @@ namespace RainbowJam2023.Player
                 if (_rb.gravityScale == 0f) // We are currently climbing
                 {
                     dir = _mov.normalized * _info.Speed / 2f;
+                    _anim.SetBool("MidAir", false);
                 }
                 else if (_canClimb && _mov.y != 0f) // We can climb and press up/down
                 {
                     _rb.gravityScale = 0f;
                     dir = _mov.normalized * _info.Speed / 2f;
+                    _anim.SetBool("MidAir", false);
                 }
                 else // On the floor
                 {
                     dir = new(_mov.x * _info.Speed, _rb.velocity.y);
+                    _anim.SetBool("MidAir", !IsOnFloor(out var _));
                 }
                 _rb.velocity = dir;
 
@@ -116,6 +119,8 @@ namespace RainbowJam2023.Player
                 transform.position = _startPos;
                 _rb.velocity = Vector2.zero;
             }
+
+            _anim.SetBool("IsGoingDown", _rb.velocity.y < 0f);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -152,6 +157,12 @@ namespace RainbowJam2023.Player
             }
         }
 
+        private bool IsOnFloor(out RaycastHit2D hit)
+        {
+            hit = Physics2D.Raycast(transform.position, Vector2.down, 1.01f, ~(1 << 6));
+            return hit.collider != null;
+        }
+
         public void OnMove(InputAction.CallbackContext value)
         {
             _mov = value.ReadValue<Vector2>();
@@ -161,8 +172,7 @@ namespace RainbowJam2023.Player
         {
             if (value.performed && !VNManager.Instance.IsPlayingStory)
             {
-                var hit = Physics2D.Raycast(transform.position, Vector2.down, 1.01f, ~(1 << 6));
-                if (hit.collider != null)
+                if (IsOnFloor(out var _))
                 {
                     _rb.AddForce(Vector2.up * _info.JumpForce, ForceMode2D.Impulse);
                 }
