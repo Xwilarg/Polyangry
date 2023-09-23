@@ -13,6 +13,8 @@ namespace RainbowJam2023.Prop
         [SerializeField]
         private SpriteRenderer _colorDisplay;
 
+        private AudioSource _source;
+
         private int _nodeIndex;
 
         private const float _minDist = .1f;
@@ -27,6 +29,14 @@ namespace RainbowJam2023.Prop
         {
             base.UpdateFromColor(baseColor);
             _isActive = baseColor == _color;
+            if (_isActive)
+            {
+                _source.Play();
+            }
+            else
+            {
+                _source.Stop();
+            }
 
             if (!_isActive)
             {
@@ -37,6 +47,7 @@ namespace RainbowJam2023.Prop
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _source = GetComponent<AudioSource>();
             InitColorDisplay(_colorDisplay);
         }
 
