@@ -12,6 +12,9 @@ namespace RainbowJam2023.Prop
         [SerializeField]
         private SpriteRenderer _colorDisplay;
 
+        [SerializeField]
+        protected AudioClip[] _clips;
+
         protected Interactible _interactible;
         protected AudioSource _source;
 

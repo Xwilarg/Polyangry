@@ -1,4 +1,7 @@
-﻿namespace RainbowJam2023.Prop
+﻿using System.Linq;
+using UnityEngine;
+
+namespace RainbowJam2023.Prop
 {
     public class ColorSwitch : Switch
     {
@@ -8,7 +11,11 @@
 
             _interactible.OnAction.AddListener(new(() =>
             {
-                _source.Play();
+                if (_clips.Any())
+                {
+                    _source.clip = _clips[Random.Range(0, _clips.Length)];
+                    _source.Play();
+                }
                 GameManager.Instance.SetCurrentColor(_color);
             }));
         }

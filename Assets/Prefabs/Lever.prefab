@@ -335,6 +335,9 @@ MonoBehaviour:
   _onPos: {fileID: 7234666354118236687}
   _offPos: {fileID: 2697929027687208423}
   _colorDisplay: {fileID: 7145658982323050874}
+  _clips:
+  - {fileID: 8300000, guid: 0a168a9e8290cc44ea4e26826a98197a, type: 3}
+  - {fileID: 8300000, guid: 85e277e89ee5d964e84f660131737256, type: 3}
 --- !u!82 &3582015950328720363
 AudioSource:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c3a917f336477974f9a970ea633a9429, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
