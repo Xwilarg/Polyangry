@@ -7,7 +7,7 @@ The four of them arrived in a rather spacious cavern with ruins strewn over the 
 How they found their way over there was everyone's guess to have, but what was more attention-grabbing to everyone were the signs of recent camping.
 
 The wood used for the fire here is still emitting warmth, most likely being in usage until recently. #speaker blue
-I believe that someone might be aware of our presence, even be in this very grotto with us still."
+"I believe that someone might be aware of our presence, even be in this very grotto with us still."
 
 "We should split up and look for them. There must be something amiss here, my gut tells me, and that ain't wrong most days!" #speaker mc
 

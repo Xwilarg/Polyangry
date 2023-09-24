@@ -1,5 +1,4 @@
-﻿INCLUDE NPCStoryGrey.ink
--> intro
+﻿-> intro
 == intro ==
 "Man, where has that rascal of a dude gone to? I can't get anything cool with what I have left..."#speaker mc
 
