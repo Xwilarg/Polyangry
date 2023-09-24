@@ -82,6 +82,9 @@ namespace RainbowJam2023.Player
             if (VNManager.Instance.IsPlayingStory)
             {
                 _rb.velocity = new(0f, _rb.velocity.y);
+                _anim.SetBool("IsRunning", false);
+                _anim.SetBool("MidAir", false);
+                _anim.SetBool("IsClimbing", false);
             }
             else
             {
