@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1523190331016602681
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 810459874152980266, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1031506049, guid: 2ac2180fab6597145bf7b11470c516fc, type: 3}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -221.20499
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -224.285
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 983754400553765036, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886720083569209190, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: _color
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886720083569209190, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: _story
+      value: 
+      objectReference: {fileID: 4900000, guid: 6244a36900a2d3d4ca56ea646d377af5, type: 3}
+    - target: {fileID: 7014932971981713742, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 98e3d5c372a09ca49a2942801d944bbb, type: 2}
+    - target: {fileID: 8839190849665933898, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}
+      propertyPath: m_Name
+      value: NPC Grey Variant Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7841ab831df01bd4986b679da4ee910f, type: 3}

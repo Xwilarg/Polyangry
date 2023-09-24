@@ -70,6 +70,7 @@ namespace RainbowJam2023
                 Color.YELLOW => UnityEngine.Color.yellow,
                 Color.BLUE => UnityEngine.Color.blue,
                 Color.BLACK => UnityEngine.Color.black,
+                Color.GREY => UnityEngine.Color.grey,
                 _ => throw new NotImplementedException()
             };
         }
@@ -80,7 +81,8 @@ namespace RainbowJam2023
             RED,
             YELLOW,
             BLUE,
-            BLACK
+            BLACK,
+            GREY
         }
     }
 }
