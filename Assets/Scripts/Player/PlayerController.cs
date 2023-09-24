@@ -114,7 +114,7 @@ namespace RainbowJam2023.Player
                 _anim.SetBool("IsRunning", _mov.magnitude != 0f);
             }
 
-            if (transform.position.y < -5f)
+            if (transform.position.y < -25f)
             {
                 transform.position = _startPos;
                 _rb.velocity = Vector2.zero;

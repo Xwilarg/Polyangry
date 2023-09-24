@@ -21,6 +21,9 @@ namespace RainbowJam2023.VN
         private VNCharacterInfo[] _characters;
         private VNCharacterInfo _currentCharacter;
 
+        [SerializeField]
+        private AudioSource _source;
+
         private Story _story;
 
         [SerializeField]
@@ -47,6 +50,10 @@ namespace RainbowJam2023.VN
         private void Awake()
         {
             Instance = this;
+            _display.OnDisplayDone += (sender, e) =>
+            {
+                _source.Stop();
+            };
         }
 
         public bool IsPlayingStory => _container.activeInHierarchy;
@@ -81,6 +88,7 @@ namespace RainbowJam2023.VN
 
         private void DisplayStory(string text)
         {
+            _source.Play();
             _container.SetActive(true);
             _namePanel.SetActive(false);
             foreach (var tag in _story.currentTags)
