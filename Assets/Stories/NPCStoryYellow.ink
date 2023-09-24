@@ -89,5 +89,5 @@ That's a win in my book", she grinned happily.
 
 "It would help if you'd provide something as well to our provisions, let alone appreciating the small things that keep us from falling over...", he sighed. #speaker yellow
 
-Daffodil joins the party! #speaker none
+Amarillo joins the party! #speaker none
 -> DONE
