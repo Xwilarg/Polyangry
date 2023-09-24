@@ -10,7 +10,7 @@ While getting accustomed with the rough terrain the apocalypse has created, hiki
 
 "Not bad of a guess you got there! Then again, it doesn't really require rocket science to assume that, carrying my fishing rod and all." #speaker mc
 
-"Touché! I heard a couple of rumors about a passionate fisherperson in the wilds, searching for the biggest catch the apocalypse left behind - or made possible." #speaker blue
+"Touche! I heard a couple of rumors about a passionate fisherperson in the wilds, searching for the biggest catch the apocalypse left behind - or made possible." #speaker blue
 
 His appearance and manner of speech does give off a sense of knowledge and wit, the type of people she wants to avoid on normal days. #speaker none
 Those with a hidden agenda, those who got a plan up in their sleeves. Knowing how to make the simpletons work the way just as he likes.

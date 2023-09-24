@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: grey
   DisplayName: Szary
-  Sprite: {fileID: 21300000, guid: 7dcc97da85a080b4399e77c9318a6556, type: 3}
+  Sprite: {fileID: 21300000, guid: 7f5c3cd2ff1e88d47a77b899bbba3712, type: 3}
