@@ -82,6 +82,6 @@ I got quite an excitement inside me that things will pick up nicely for us all!"
 Nodding in agreement, the group decided to journey together quite a bit longer, seeing what the changes in the world had in store for them. #speaker none
 And who knows what the world would look like if anyone out ther would work quite as well together as they did on that day...
 
-The End.
+The End. #menu
 
 -> DONE

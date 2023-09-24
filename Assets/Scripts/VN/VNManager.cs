@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace RainbowJam2023.VN
@@ -47,6 +48,8 @@ namespace RainbowJam2023.VN
 
         private Action _onDone;
 
+        private bool _backToMenu;
+
         private void Awake()
         {
             Instance = this;
@@ -79,6 +82,7 @@ namespace RainbowJam2023.VN
         public void ShowStory(TextAsset asset, Action onDone)
         {
             Debug.Log($"[STORY] Playing {asset.name}");
+            _backToMenu = false;
             _currentCharacter = null;
             _onDone = onDone;
             _story = new(asset.text);
@@ -102,6 +106,10 @@ namespace RainbowJam2023.VN
                         else _currentCharacter = _characters.FirstOrDefault(x => x.Name.ToUpperInvariant() == content);
 
                         Debug.Log($"[STORY] Speaker set to {_currentCharacter?.Name}");
+                        break;
+
+                    case "menu":
+                        _backToMenu = true;
                         break;
 
                     default:
@@ -144,6 +152,10 @@ namespace RainbowJam2023.VN
             {
                 _container.SetActive(false);
                 _onDone?.Invoke();
+                if (_backToMenu)
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
             }
         }
 
